@@ -149,13 +149,13 @@ align-items: stretch;
 /*Portfolio styles*/
 #portfolio {
   height: 450px;
-  background-color: green;
+/*   background-color: green; */
 }
 
 /*Skills section styles*/
 #skills{
   height: 150px;
-  background-color: yellow;
+/*   background-color: yellow; */
 }
 
 /*Contact Me section styles*/
