@@ -96,7 +96,7 @@ align-items: stretch;
 }
 #home h3 {
   text-transform: small-caps;
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-weight: bold;
   color: #111;
   letter-spacing: -1px;
@@ -122,14 +122,20 @@ align-items: stretch;
   height: 550px;
   width: 40%;
   border: 4px solid black;
+  border-radius: 20px;
+  
 }
 #about article {
+  display: flex;
+  flex-direction: row;
   width: 60%;
   align-self: center;
   font-family:serif;
   text-align: justify;
   padding: 75px;
    height: 750px;
+   
+   
   
 }
 #about article p {
@@ -140,6 +146,8 @@ align-items: stretch;
   color: black;
   padding: 1.1em;
   font-family: 'Libre Baskerville', serif;
+  border: 4px solid black;
+  border-radius: 20px;
 }
 #about article h3 {
   color: #f2f2f2;
@@ -149,14 +157,77 @@ align-items: stretch;
 /*Portfolio styles*/
 #portfolio {
   height: 450px;
-/*   background-color: green; */
+
 }
 
-/*Skills section styles*/
-#skills{
-  height: 150px;
-/*   background-color: yellow; */
+/*.portfolio-list li a img{
+	height:100px;
+	width:100px;
+}*/
+
+/*Interests section styles*/
+
+.container {
+  width: 90vw;
+  margin:0 auto 2em;
 }
+#interests {
+ display: relative;
+ justify-content:space-around;
+ align-items: stretch;
+ flex-wrap: wrap;
+}
+#interests img {
+  max-width: 100%;
+  align-self: stretch;
+  height: 550px;
+  width: 40%;
+  border: 4px solid black;
+  border-radius: 20px;
+  
+}
+#interests article {
+  display: relative;
+  flex-direction: row;
+  width: 60%;
+  align-self: center;
+  font-family:serif;
+  text-align: justify;
+  padding: 75px;
+   height: 750px;
+   
+   
+  
+}
+#interests article p {
+  font-size: 1.8em;
+  line-height: 1em;
+  font-weight: 500;
+  background: #f2f2f2;
+  color: black;
+  padding: 1.1em;
+  font-family: 'Libre Baskerville', serif;
+  border: 4px solid black;
+  border-radius: 20px;
+}
+#interests article h3 {
+  color: #f2f2f2;
+  background: #808080;
+}
+
+/* this gets the text to the bottom left*/ 
+.bottomleft {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+
+
+	
+}
+
+
 
 /*Contact Me section styles*/
 #contact {
@@ -165,52 +236,113 @@ align-items: stretch;
   border: 4px solid black;
 }
 <form {
-	font-family: "SegoeUI-SemiBold", serif;
+	* {
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+body {
+	font-family: segoe ui, verdana, arial, sans-serif;
 	font-size: 1em;
-	}
-	form input[type=text],
-	form input[type=email],
-	form textarea,
-form label {
-  font-family: "SegoeUI-Light", serif;
-  font-size: 1em;
-  background: transparent;
-  display: block;
-  color: #fff;
 }
-form input[type=text],
-form input[type=email],
-form textarea {
-  border: 2px solid #fff;
-  padding: 18px 20px;
-  font-size: 1.28571em;
+
+h1 {
+  text-shadow: 1px 1px #999;
+}
+
+.wrap {
+	width: 100%;
+	max-width: 600px;
+	margin: 0px auto;
+}
+
+.contact ul {
+	width: 100%;
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 0px;
+}
+
+.contact_form li{
+	position: relative;
+} 
+
+.contact label {
+	width: 100%;
+	display: inline-block;
+	float: left;
+	padding: 3px;
+}
+
+.contact input {
+	height: 40px; 
+	width: 100%;
+	padding: 5px 8px;
+	margin-bottom: 20px;
+}
+
+.contact textarea {
+	padding:8px; 
+	width: 100%;
+}
+
+.contact input, 
+.contact textarea { 
+  font-family: segoe ui, verdana, arial, sans-serif;
+	border: 1px solid #aaa;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #999 inset;
+	border-radius: 2px;
+	padding-right: 30px;
+}
+
+.contact input:focus, 
+.contact textarea:focus {
+	background: #fff; 
+	border: 1px solid #555; 
+	box-shadow: 0 0 10px #aaa; 
+}
+
+.contact input:required:valid, 
+.contact textarea:required:valid {
+  box-shadow: 0px 0px 3px #5cd053, 0 10px 15px #999 inset;
+	border-color: green;
+}
+
+.contact input:focus:invalid, 
+.contact textarea:focus:invalid {
+	box-shadow: 0 0 10px #d45252;
+	border-color: red;
+}
+
+button {
+  font-family: segoe ui, verdana, arial, sans-serif;
+  font-size: 1.1em;
+	display: inline-block;
+	position: relative;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
   width: 100%;
-  margin-bottom: 38px;
-  resize: none;
+  max-width: 200px;
+	color: #fff;
+  border: 0;
+	background: #2266ee;
+
+ }
+
+button:hover {
+	background-color: #333;
 }
-form input[type=text]:focus,
-form input[type=email]:focus,
-form textarea:focus {
-  outline: none;
+
+button:active {
+	box-shadow: 0 0 10px 5px #000 inset; 
 }
-form label {
-  font-family: "SegoeUI-Bold", serif;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-form .top-section::after {
-  content: "";
-  display: table;
-  clear: both;
-  overflow: visible;
-}
-form fieldset:first-child {
-  width: 40.17094%;
-  float: left;
-}
-form .contact-info {
-  width: 48.71795%;
-  float: right;
+
+.float-right { float: right; }
 }
 	</form>
 
@@ -263,7 +395,6 @@ form .contact-info {
   align-self: center;
   font-family:serif;
   text-align: justify;
-  padding: .8em;
 }
 #about img {
   max-width: 100%;
@@ -279,4 +410,18 @@ form .contact-info {
 	left:0;
 	right:0;
 	background-color: white;
+	
+}
+
+.footer img{
+	height:80px;
+	width:80px;
+}
+h4
+
+{
+  font-size: 2.5em;
+  font-weight: bold;
+  color: red;
+  text-align: center;
 }
